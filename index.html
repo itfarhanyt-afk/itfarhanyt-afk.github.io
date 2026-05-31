@@ -9,11 +9,11 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --bg: #0a0a0a;
-    --surface: #111111;
-    --border: #222222;
-    --accent: #00ff88;
-    --accent2: #ff3c3c;
+    --bg: #000000;
+    --surface: #080808;
+    --border: #1a1a1a;
+    --accent: #ff3c3c;
+    --accent2: #ff6b6b;
     --text: #f0f0f0;
     --muted: #666666;
     --font-display: 'Bebas Neue', sans-serif;
@@ -514,12 +514,19 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" style="flex-direction:row;align-items:center;justify-content:space-between;padding-top:120px;">
   <div class="hero-bg-text">PORTFOLIO</div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;">
   <div class="hero-tag">Available for freelance work</div>
   <h1 class="hero-title">Farhan<br/><span>Butt</span><br/>.</h1>
   <p class="hero-sub">Hello, Farhan here — a creative professional specialising in Social Media Management &amp; Video Editing. Based in Pakistan. Working everywhere.</p>
   <a href="#work" class="hero-cta">View My Work</a>
+  </div>
+  <div style="flex:0 0 340px;height:480px;position:relative;margin-right:48px;">
+    <img src="https://i.ibb.co/Lz5XX3L1/1776779004540.png" alt="Farhan Butt"
+      style="width:100%;height:100%;object-fit:cover;object-position:top center;
+      border:3px solid #ff3c3c;display:block;" />
+  </div>
   <div class="hero-scroll">
     <span>Scroll</span>
     <div class="hero-scroll-line"></div>
@@ -557,9 +564,12 @@
     </div>
   </div>
   <div class="about-visual reveal">
-    <div class="about-card main">
-      <div class="about-card-name">FARHAN BUTT</div>
-      <div class="about-card-role">Social Media Manager &amp; Video Editor</div>
+    <div class="about-card main" style="padding:0;overflow:hidden;">
+      <img src="https://i.ibb.co/Lz5XX3L1/1776779004540.png" alt="Farhan Butt" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"/>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:24px;background:linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
+        <div class="about-card-name" style="position:relative;">FARHAN BUTT</div>
+        <div class="about-card-role" style="position:relative;">Social Media Manager &amp; Video Editor</div>
+      </div>
     </div>
     <div class="about-card tag">Available Now</div>
   </div>
@@ -616,23 +626,18 @@
   <div class="work-list">
     <div class="work-item reveal">
       <div class="work-item-num">01</div>
-      <div class="work-item-name">Coming Soon</div>
-      <div class="work-item-tag">Category</div>
+      <div class="work-item-name">Social Media Campaign</div>
+      <div class="work-item-tag">Social Media</div>
     </div>
     <div class="work-item reveal">
       <div class="work-item-num">02</div>
-      <div class="work-item-name">Coming Soon</div>
-      <div class="work-item-tag">Category</div>
+      <div class="work-item-name">Content Creation</div>
+      <div class="work-item-tag">Content</div>
     </div>
     <div class="work-item reveal">
       <div class="work-item-num">03</div>
-      <div class="work-item-name">Coming Soon</div>
-      <div class="work-item-tag">Category</div>
-    </div>
-    <div class="work-item reveal">
-      <div class="work-item-num">04</div>
-      <div class="work-item-name">Coming Soon</div>
-      <div class="work-item-tag">Category</div>
+      <div class="work-item-name">Video Edit Reel</div>
+      <div class="work-item-tag">Video Editing</div>
     </div>
   </div>
 </section>
