@@ -489,11 +489,55 @@
     nav { padding: 20px 24px; }
     .nav-links { display: none; }
     .hero, .about, .skills, .work, .contact { padding-left: 24px; padding-right: 24px; }
+
+    /* Hero: stack photo on top, text below on mobile */
+    .hero {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      padding-top: 90px !important;
+      padding-bottom: 60px !important;
+      gap: 32px !important;
+    }
+    /* Photo comes first (top) on mobile */
+    .hero > div:first-of-type {
+      order: 1 !important;
+      width: 100% !important;
+      height: 280px !important;
+      flex: none !important;
+      margin-left: 0 !important;
+    }
+    .hero > div:first-of-type img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: top center !important;
+    }
+    /* Text comes second (below) on mobile */
+    .hero > div:last-of-type {
+      order: 2 !important;
+      width: 100% !important;
+      flex: none !important;
+      padding-left: 0 !important;
+    }
+    .hero-title { font-size: 64px !important; }
+    .hero-scroll { display: none; }
+
+    /* About */
     .about { grid-template-columns: 1fr; }
     .about-visual { display: none; }
+    .about-stats { grid-template-columns: 1fr 1fr; }
+
+    /* Skills */
     .skills-grid { grid-template-columns: 1fr; }
+
+    /* Work */
     .work-item { grid-template-columns: 60px 1fr; }
     .work-item-tag { display: none; }
+
+    /* Contact */
+    .contact-title { font-size: 52px !important; }
+
+    /* Footer */
     footer { padding: 24px; flex-direction: column; gap: 8px; text-align: center; }
   }
 </style>
@@ -516,16 +560,16 @@
 <!-- HERO -->
 <section class="hero" style="flex-direction:row;align-items:center;justify-content:space-between;padding-top:120px;">
   <div class="hero-bg-text">PORTFOLIO</div>
-  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;">
+  <div style="flex:0 0 340px;height:480px;position:relative;margin-left:48px;">
+    <img src="https://i.ibb.co/Lz5XX3L1/1776779004540.png" alt="Farhan Butt"
+      style="width:100%;height:100%;object-fit:cover;object-position:top center;
+      border:3px solid #ff3c3c;display:block;" />
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;padding-left:48px;">
   <div class="hero-tag">Available for freelance work</div>
   <h1 class="hero-title">Farhan<br/><span>Butt</span><br/>.</h1>
   <p class="hero-sub">Hello, Farhan here — a creative professional specialising in Social Media Management &amp; Video Editing. Based in Pakistan. Working everywhere.</p>
   <a href="#work" class="hero-cta">View My Work</a>
-  </div>
-  <div style="flex:0 0 340px;height:480px;position:relative;margin-right:48px;">
-    <img src="https://i.ibb.co/Lz5XX3L1/1776779004540.png" alt="Farhan Butt"
-      style="width:100%;height:100%;object-fit:cover;object-position:top center;
-      border:3px solid #ff3c3c;display:block;" />
   </div>
   <div class="hero-scroll">
     <span>Scroll</span>
